@@ -1,9 +1,9 @@
 #include "Infix_To_Postfix.h"
 #include <cctype>
 #include <sstream>
-using std::istringstream;
-using std::string;
-using namespace std;
+using istringstream;
+using string;
+
 
 // Thanks to hallee for some of these function shenanigans
 const string Infix_To_Postfix::OPEN = "([{";
@@ -50,15 +50,15 @@ int Infix_To_Postfix::precedence(char op) const {
 }
 
 bool Infix_To_Postfix::is_operator(char ch) const {
-  return (OPERATORS.find(ch) != std::string::npos);
+  return (OPERATORS.find(ch) != string::npos);
 }
 
 bool Infix_To_Postfix::open_parentheses(char ch) const {
-  return (OPEN.find(ch) != std::string::npos);
+  return (OPEN.find(ch) != string::npos);
 }
 
 bool Infix_To_Postfix::closed_parentheses(char ch) const {
-  return (CLOSE.find(ch) != std::string::npos);
+  return (CLOSE.find(ch) != string::npos);
 }
 
 // Function computes order of operations
