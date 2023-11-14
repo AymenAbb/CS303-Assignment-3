@@ -12,10 +12,10 @@ public:
   Item_Type &top();
   void pop();
   bool empty() const;
-  std::size_t size() const;
+  size_t size() const;
 
 private:
-  std::vector<Item_Type> container;
+  vector<Item_Type> container;
 };
 #ifndef STACK_TC_
 #define STACK_TC_
@@ -45,7 +45,7 @@ template <typename Item_Type> Item_Type &stack<Item_Type>::top() {
 }
 
 // Returns items in stack
-template <typename Item_Type> std::size_t stack<Item_Type>::size() const {
+template <typename Item_Type> size_t stack<Item_Type>::size() const {
   return container.size();
 }
 #endif
